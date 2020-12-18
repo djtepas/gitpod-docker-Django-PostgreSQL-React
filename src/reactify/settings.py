@@ -133,9 +133,9 @@ STATIC_ROOT = BASE_DIR / 'static-cdn-local'
 CORS_URLS_REGEX = r'^/api.*'
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ORIGIN_WHITELIST = (
-    '*',
-    'your-domain.com',
-    'your-bucket-here.s3-us-west-2.amazonaws.com',
+    'http://*',
+    'http://your-domain.com',
+    'http://your-bucket-here.s3-us-west-2.amazonaws.com',
 )
 
 REST_FRAMEWORK = {
