@@ -10,6 +10,6 @@ USER root
 
 RUN apt-get update -y \
     && apt-get upgrade \
-    && apt-get install python-pip python-setuptools python-dev build-essential python 3.9
+    && apt-get install python-pip python-setuptools python-dev build-essential python3.9
 
 USER gitpod
