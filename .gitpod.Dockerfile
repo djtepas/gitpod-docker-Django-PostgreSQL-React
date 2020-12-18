@@ -8,7 +8,7 @@ FROM gitpod/workspace-postgres
 
 USER root
 
-RUN apt-get update && apt-get upgrade -y 
-    # && apt-get python3.9
+RUN apt-get update && apt-get upgrade -y /
+    && apt-get python3.9 -y
 
 USER gitpod
