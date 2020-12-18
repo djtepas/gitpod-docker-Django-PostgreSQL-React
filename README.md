@@ -15,3 +15,6 @@ These are my basic setup items I use when building a new website.
 
 1. React, Django, and PostgreSQL Dockerized -- Part 1: Development setup
     * https://dev.to/alchermd/react-django-and-postgresql-dockerized-part-1-development-setup-1epf
+2. Gitpod docs
+    * https://www.gitpod.io/docs/
+
