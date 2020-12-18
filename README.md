@@ -17,12 +17,15 @@ These are my basic setup items I use when building a new website.
 1. Start with prebuilt "workspace-postgresql"
 2. Check Python verion --> 3.8.6
 3. Check Node verion --> v12.20.0
+4. Clone Base project from Coding for Entrepreneurs
 
 
 ## References used to build the workspace
 
-1. React, Django, and PostgreSQL Dockerized -- Part 1: Development setup
-    * https://dev.to/alchermd/react-django-and-postgresql-dockerized-part-1-development-setup-1epf
-2. Gitpod docs
+* CodingforEntrepreneurs
+    * https://www.codingforentrepreneurs.com/projects/reactify-django
+    * https://github.com/codingforentrepreneurs/Reactify-Django
+
+* Gitpod docs
     * https://www.gitpod.io/docs/
 
