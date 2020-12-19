@@ -35,10 +35,6 @@ DATABASE = {
 
 ## References used to build the workspace
 
-* CodingforEntrepreneurs
-    * https://www.codingforentrepreneurs.com/projects/reactify-django
-    * https://github.com/codingforentrepreneurs/Reactify-Django
-
 * Gitpod docs
     * https://www.gitpod.io/docs/
 
