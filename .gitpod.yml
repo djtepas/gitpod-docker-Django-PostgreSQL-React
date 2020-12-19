@@ -2,9 +2,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: pipenv sync
-    command: 
-      psql -f setups/database-setup.sql
+  - init: psql -f setups/database-setup.sql
+    command: pipenv sync 
+      
 ports:
   - port: 8000
 
