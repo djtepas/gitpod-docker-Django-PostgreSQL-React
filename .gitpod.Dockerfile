@@ -15,7 +15,6 @@ RUN apt-get install python3.9 -y
 USER gitpod
 
 RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sudo sh
-# RUN psql -f setups/database-setup.sql
 
 RUN npm i -g prettier
 
