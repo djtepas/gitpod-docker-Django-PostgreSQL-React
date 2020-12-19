@@ -5,7 +5,6 @@ tasks:
   - init: pipenv sync
     command: 
       psql -f setups/database-setup.sql
-      pipenv shell
 ports:
   - port: 8000
 
