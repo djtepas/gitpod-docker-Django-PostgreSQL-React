@@ -3,4 +3,10 @@ image:
 
 tasks:
   - init: pipenv sync
-    command: pipenv shell
+    command: 
+      pipenv shell
+      echo DATABASE_URL=$DATABASE_URL >> .env
+      pg_start.sh
+ports:
+  - port: 8000
+
