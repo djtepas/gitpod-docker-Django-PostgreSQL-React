@@ -4,9 +4,9 @@ image:
 tasks:
   - init: pipenv sync
     command: 
-      pipenv shell
       pg_start.sh
       psql -f setups/database-setup.sql
+      pipenv shell
 ports:
   - port: 8000
 
