@@ -11,16 +11,29 @@ These are my basic setup items I use when building a new website.
     * Django
 * Node JS
     * React
+* Heroku ready
 
-## Steps Used
+## Steps run by gitpod
 
 1. Start with prebuilt "workspace-postgresql"
-2. Check Python verion --> 3.8.6
-3. Check Node verion --> v12.20.0
-4. setups will create a d 
+1. Setups will create a database with the following:
+    Item | parameter
+    -----|----------
+    Database Name | dev-project
+    Username | djangodev
+    Password | djangodev
+
+** DO NOT USE ** the above settings in a production project. These are only to be used for development.
 
 
-6. Update settings for Django
+## Steps left at finish project
+The enviroment is now ready to start a Django app and React App.
+1. Go to github and create a new repository.
+1. CLI `git remote add origin git@github.com:<username>/<new_repo>`
+1. CLI `django-admin startproject <project name> .`
+1. CLI `django-admin startapp <app name>`
+1. Change directory <project name> and run `npx create-react-app <react app name>`
+1. Update settings for Django
 ```Python
 DATABASE = {
     'default': {
@@ -34,7 +47,10 @@ DATABASE = {
 }
 
 ## References used to build the workspace
-
 * Gitpod docs
     * https://www.gitpod.io/docs/
+* Reactify Django by Coding for Entrepreneurs
+    * https://codingforentrepreneurs.com/projects/reactify-django
+    * https://github.com/codingforentrepreneurs/Reactify-Django
+
 
