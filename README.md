@@ -29,7 +29,7 @@ These are my basic setup items I use when building a new website.
 ## Steps left at finish project
 The enviroment is now ready to start a Django app and React App.
 1. Go to github and create a new repository.
-1. CLI `git remote add origin git@github.com:<username>/<new_repo>`
+1. CLI `git remote set-url origin git@github.com:<username>/<new_repo>` or `git remote set-url origin https://github.com/<username>/<new_repo`
 1. CLI `django-admin startproject <project name> .`
 1. CLI `django-admin startapp <app name>`
 1. Change directory <project name> and run `npx create-react-app <react app name>`
