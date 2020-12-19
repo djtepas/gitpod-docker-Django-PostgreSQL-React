@@ -1,6 +1,3 @@
-# Source pull
-reactifydjango/
-
 # Node.js related
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
@@ -24,11 +21,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-static-cdn-local/admin/
-static-cdn-local/css/
-static-cdn-local/img/
-static-cdn-local/js/
-static-cdn-local/rest_framework/
 bin/
 include/
 lib/
