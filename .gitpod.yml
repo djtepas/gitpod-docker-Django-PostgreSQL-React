@@ -2,7 +2,7 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: psql -f setups/database-setup.sql
+  - init: psql -f database-setup.sql
     command: 
       pipenv install django
       pipenv shell
