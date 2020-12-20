@@ -10,7 +10,11 @@ ports:
     onOpen: ignore
 tasks:
   - init: >
-      mkdir backend && cd backend && pipenv install django django-cors-headers djangorestframework coverage && pipenv shell && django-admin createproject backend . 
+      mkdir backend && 
+      cd backend && 
+      pipenv install django django-cors-headers djangorestframework coverage && 
+      pipenv shell && 
+      django-admin startproject backend . 
       # cd ..
       # mkdir frontend 
       # cd frontend 
