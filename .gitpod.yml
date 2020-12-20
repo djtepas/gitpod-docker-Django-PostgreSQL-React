@@ -11,15 +11,15 @@ ports:
 tasks:
   - init: >
       python script_setup_django.py
-    command: >
+  - command: >
       echo Terminal 1 &&
       pipenv shell &&
       echo "from backend.settings import *" > backend/local_settings.py &&
       echo "ALLOWED_HOST" = ['*'] >> backend/local_settings.py &&
       export DJANGO_SETTINGS_MODULE=backend.localsettings &&
       python manage.py runserver 0.0.0.0:8000
-      name: Django Server
-    command: >
-      echo Terminal 2 &&
-      cd frontend && yarn start &&
-      name: React Server
+  name: Django Server
+    # command: >
+    #   echo Terminal 2 &&
+    #   cd frontend && yarn start &&
+    #   name: React Server
