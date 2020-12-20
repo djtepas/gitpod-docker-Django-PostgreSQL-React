@@ -1,7 +1,7 @@
 FROM gitpod/workspace-postgres
 
 USER root
-RUN sudo apt-get install python
+RUN sudo apt-get install python3
 
 # Set up the database for first use.
 RUN psql -f create_db.sql
