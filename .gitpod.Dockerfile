@@ -6,9 +6,10 @@ FROM gitpod/workspace-postgres
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
+USER root
+RUN apt-get update && apt-get intall -y && apt-get clean
+RUN -it --rm python:latest
+
 USER gitpod
 
 RUN curl https://cli-assets.heroku.com/install-ubuntu.sh | sudo sh
-
-RUN npm i -g prettier
-

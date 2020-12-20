@@ -1,17 +1,33 @@
 image:
   file: .gitpod.Dockerfile
 
-tasks:
-  - init: psql -f database-setup.sql
-    command: 
-      pipenv install django
-      pipenv shell
-      
 ports:
   - port: 8000
-    onOpen: open-preview
+    onOpen: open-browser
+  - port: 3000
+    onOpen: open-browser
   - port: 5432
     onOpen: ignore
-  - port : 3000
-    onOpen: notify
-
+tasks:
+  - init: >
+      mkdir backend 
+      cd backend 
+      pipenv install django django-cors-headers djangorestframework coverage
+      pipenv shell
+      django-admin createproject backend . 
+  - init: >
+      mkdir frontend 
+      cd frontend 
+      npx create-react-app frontend .
+      cd frontend
+      npm install react-router-dom 
+      npm install @material-ui/core
+  - init: psql -f create_db.sql
+  command: >
+      pipenv shell
+      cd backend
+      echo "from backend.settings import *" > backend/local_settings.py &&
+      echo "ALLOWED_HOST" = ['*'] >> backend/local_settings.py &&
+      export DJANGO_SETTINGS_MODULE=backend.localsettings &&
+      python mange.py runserver 0.0.0.0:8000
+  command: cd frontend && yarn start
