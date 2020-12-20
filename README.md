@@ -19,7 +19,7 @@ These are my basic setup items I use when building a new website.
 1. Setups will create a database with the following:
     Item | parameter
     -----|----------
-    Database Name | dev-project
+    Database Name | devproject
     Username | djangodev
     Password | djangodev
 
@@ -27,7 +27,7 @@ These are my basic setup items I use when building a new website.
 
 
 ## Steps left at finish project
-The enviroment is now ready to start a Django app and React App.
+The environment is now ready to start a Django app and React App.
 1. Go to github and create a new repository.
 1. CLI `git remote set-url origin git@github.com:<username>/<new_repo>` or `git remote set-url origin https://github.com/<username>/<new_repo`
 1. CLI `django-admin startproject <project name> .`
