@@ -15,14 +15,14 @@ tasks:
       pipenv install django django-cors-headers djangorestframework coverage
       pipenv shell
       django-admin createproject backend . 
-      cd ..
-      mkdir frontend 
-      cd frontend 
-      npx create-react-app frontend .
-      cd frontend
-      npm install react-router-dom 
-      npm install @material-ui/core
-      psql -f create_db.sql
+      # cd ..
+      # mkdir frontend 
+      # cd frontend 
+      # npx create-react-app frontend .
+      # cd frontend
+      # npm install react-router-dom 
+      # npm install @material-ui/core
+      # psql -f create_db.sql
   # command: >
   #     pipenv shell
   #     cd backend
