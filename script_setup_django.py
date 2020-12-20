@@ -1,5 +1,5 @@
 import os
-from subprocess import Popen
+from subprocess import run
 
 dir_list = ['backend', 'frontend']
 
@@ -19,5 +19,5 @@ def create_dir(dir_list):
 
 if __name__ == '__main__':
     create_dir(dir_list)
-    Popen("pipenv install django django-cors-headers djangorestframework coverage")
-    Popen("pipenv run django-admin startproject backend .")
+    run("pipenv install django django-cors-headers djangorestframework coverage")
+    run("pipenv run django-admin startproject backend .")
