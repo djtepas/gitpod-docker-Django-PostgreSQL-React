@@ -11,7 +11,7 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 # Update the package listing, so we know that package exist:
-apt-get Update
+apt-get update
 
 # Install security updates:
 apt-get -y upgrade
