@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Bash "strict mode", to help catch problems and buts in the shell
+# Bash "strict mode", to help catch problems and puts in the shell
 # script. Every bash script you write should include this. see
 # http://redsymbol.net/articles/unofficial-bash-strict-mode/ for
 # details.
@@ -11,7 +11,7 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 # Update the package listing, so we know that package exist:
-apt-get update
+apt-get -y update 
 
 # Install security updates:
 apt-get -y upgrade
