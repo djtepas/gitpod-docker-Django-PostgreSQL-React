@@ -11,26 +11,16 @@ ports:
 tasks:
   - init: >
       python script_setup_django.py
-      
-      
-      
-      # mkdir backend && 
-      # cd backend && 
-      #  
-      # django-admin startproject backend . &&
-      # cd .. &&
-      # mkdir frontend &&
-      # cd frontend &&
-      # npx create-react-app frontend . &&
-      # cd frontend &&
-      # npm install react-router-dom &&
-      # npm install @material-ui/core &&
-      # psql -f create_db.sql
-  # command: >
-  #     pipenv shell
-  #     cd backend
-  #     echo "from backend.settings import *" > backend/local_settings.py
-  #     echo "ALLOWED_HOST" = ['*'] >> backend/local_settings.py
-  #     export DJANGO_SETTINGS_MODULE=backend.localsettings
-  #     python mange.py runserver 0.0.0.0:8000
-  # command: cd frontend && yarn start
+  - command: >
+      echo Terminal 1
+      pipenv shell
+      echo "from backend.settings import *" > backend/local_settings.py
+      echo "ALLOWED_HOST" = ['*'] >> backend/local_settings.py
+      export DJANGO_SETTINGS_MODULE=backend.localsettings
+      python manage.py runserver 0.0.0.0:8000
+      name: Django Server
+  - openMode: split-right
+    command: >
+      echo Terminal 2
+      cd frontend && yarn start
+      name: React Server
