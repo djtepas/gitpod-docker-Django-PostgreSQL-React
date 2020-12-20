@@ -9,20 +9,20 @@ ports:
   - port: 5432
     onOpen: ignore
 tasks:
-  - init: >
-      mkdir backend && 
-      cd backend && 
-      pipenv install django django-cors-headers djangorestframework coverage && 
-      pipenv shell && 
-      django-admin startproject backend . &&
-      cd .. &&
-      mkdir frontend &&
-      cd frontend &&
-      npx create-react-app frontend . &&
-      cd frontend &&
-      npm install react-router-dom &&
-      npm install @material-ui/core &&
-      psql -f create_db.sql
+  - init: python script_setup_django.py
+      # mkdir backend && 
+      # cd backend && 
+      # pipenv install django django-cors-headers djangorestframework coverage && 
+      # pipenv shell && 
+      # django-admin startproject backend . &&
+      # cd .. &&
+      # mkdir frontend &&
+      # cd frontend &&
+      # npx create-react-app frontend . &&
+      # cd frontend &&
+      # npm install react-router-dom &&
+      # npm install @material-ui/core &&
+      # psql -f create_db.sql
   # command: >
   #     pipenv shell
   #     cd backend
