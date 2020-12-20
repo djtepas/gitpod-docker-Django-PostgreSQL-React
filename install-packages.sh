@@ -10,11 +10,11 @@ set -euo pipefail
 # feedback:
 export DEBIAN_FRONTEND=noninteractive
 
-# Update the package listing, so we know that package exist:
-su apt-get -y update
+# # Update the package listing, so we know that package exist:
+# su apt-get update
 
-# Install security updates:
-su apt-get -y upgrade
+# # Install security updates:
+# su apt-get -y upgrade
 
 # Install a new packaage, without unnecessary recommended packages:
 apt-get -y install --no-install-recommends syslog-ng
