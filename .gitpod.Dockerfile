@@ -2,7 +2,7 @@ FROM gitpod/workspace-postgres
 
 USER root
 COPY install-packages.sh .
-RUN sudo ./install-packages.sh
+RUN sudo install-packages.sh
 
 # Set up the database for first use.
 RUN psql -f create_db.sql
