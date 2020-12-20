@@ -9,11 +9,14 @@ ports:
   - port: 5432
     onOpen: ignore
 tasks:
-  - init: python script_setup_django.py
+  - init: >
+      python script_setup_django.py
+      
+      
+      
       # mkdir backend && 
       # cd backend && 
-      # pipenv install django django-cors-headers djangorestframework coverage && 
-      # pipenv shell && 
+      #  
       # django-admin startproject backend . &&
       # cd .. &&
       # mkdir frontend &&
