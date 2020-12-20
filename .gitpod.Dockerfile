@@ -7,7 +7,6 @@ FROM gitpod/workspace-postgres
 # More information: https://www.gitpod.io/docs/config-docker/
 
 USER root
-RUN apt-get update && apt-get intall -y
 RUN -it --rm python:latest
 
 USER gitpod
