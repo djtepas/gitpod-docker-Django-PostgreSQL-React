@@ -1,17 +1,24 @@
 image:
   file: .gitpod.Dockerfile
 
-tasks:
-  - init: psql -f database-setup.sql
-    command: 
-      pipenv install django
-      pipenv shell
-      
 ports:
   - port: 8000
-    onOpen: open-preview
+    onOpen: open-browser
+  - port: 3000
+    onOpen: open-browser
   - port: 5432
     onOpen: ignore
-  - port : 3000
-    onOpen: notify
-
+tasks:
+  - init: >
+      python script_setup_django.py
+    command: >
+      echo Terminal Django Server &&
+      echo "from backend.settings import *" > backend/local_settings.py &&
+      echo "ALLOWED_HOST" = ['*'] >> backend/local_settings.py &&
+      export DJANGO_SETTINGS_MODULE=backend.localsettings &&
+      python manage.py runserver 0.0.0.0:8000
+    name: Django Server
+    command: >
+      echo Terminal 2 &&
+      cd frontend && yarn start
+    name: React Server
